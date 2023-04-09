@@ -15,6 +15,12 @@ const Document = () => {
         <link
           rel="icon"
           type="image/png"
+          sizes="96x96"
+          href="/favicons/favicon-96x96.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
           sizes="32x32"
           href="/favicons/favicon-32x32.png"
         />
