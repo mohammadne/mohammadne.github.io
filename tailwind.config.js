@@ -1,18 +1,42 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx}',
-    './src/components/**/*.{js,ts,jsx,tsx}',
-    './src/app/**/*.{js,ts,jsx,tsx}',
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./sections/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      xs: "480px",
+      sm: "640px",
+      md: "768px",
+      lg: "976px",
+      xl: "1440px",
+    },
+    fontFamily: {
+      sans: ['"Jost"', "sans-serif"],
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        bglight: "#F9FAFB",
+        marrslight: "#1C9A9A",
+        marrsgreen: "#007A7A",
+        marrsdark: "#004D4D",
+        cardlight: "#EFF3F3",
+
+        // bgdark: "#2D2D2D",
+        bgdark: "#1D2A35",
+        carrilight: "#57DCB4",
+        carrigreen: "#05CE91",
+        carridark: "#00835B",
+        // carddark: "#383838",
+        carddark: "#22323F",
+        textlight: "#F9FAFB",
       },
     },
   },
-  plugins: [],
-}
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/line-clamp"),
+  ],
+};
