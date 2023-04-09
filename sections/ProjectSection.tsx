@@ -8,11 +8,6 @@ import { useSection } from "context/section";
 import useOnScreen from "hooks/useOnScreen";
 import useScrollActive from "hooks/useScrollActive";
 
-import terminalPortfolio from "public/projects/terminal-portfolio.webp";
-import haruFashion from "public/projects/haru-fashion.webp";
-import haruApi from "public/projects/haru-api.webp";
-import astroPaper from "public/projects/astro-paper.webp";
-
 const ProjectSection: React.FC = () => {
   const { theme } = useTheme();
 
@@ -69,7 +64,7 @@ const projects = [
     type: "Frontend",
     image: (
       <Image
-        src={terminalPortfolio}
+        src="https://user-images.githubusercontent.com/51189292/230770685-64316f9b-6861-48cc-96db-30bad079e541.png"
         sizes="100vw"
         fill
         alt="Terminal Portfolio"
@@ -87,7 +82,7 @@ const projects = [
     type: "Frontend",
     image: (
       <Image
-        src={haruFashion}
+        src="https://user-images.githubusercontent.com/51189292/230770677-74661d9d-f99e-46ea-a965-0bc20d56119a.png"
         sizes="100vw"
         fill
         alt="Haru Fashion App"
@@ -105,7 +100,7 @@ const projects = [
     type: "Backend",
     image: (
       <Image
-        src={haruApi}
+        src="https://user-images.githubusercontent.com/51189292/230770668-190b0cd1-6321-4634-9f46-f7cb2414cbc3.png"
         sizes="100vw"
         fill
         alt="Haru API"
@@ -123,7 +118,7 @@ const projects = [
     type: "Frontend",
     image: (
       <Image
-        src={astroPaper}
+        src="https://user-images.githubusercontent.com/51189292/230770708-3700b23d-60a1-4bc5-bb2f-bff479124bfd.png"
         sizes="100vw"
         fill
         alt="AstroPaper"
