@@ -7,7 +7,7 @@ tags:
   - TailwindCSS
   - HeadlessCMS
   - Blog
-author: Mohammad Nasr
+author: Sat Naing
 type: article
 coverImage: https://res.cloudinary.com/noezectz/image/upload/v1653050141/SatNaing/blog_at_cafe_ei1wf4.jpg
 coverImageAlt: Macbook at a cafe
