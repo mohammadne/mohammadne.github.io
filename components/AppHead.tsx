@@ -43,7 +43,7 @@ const AppHead: React.FC<Props> = ({
     ogImageAlt = meta.ogImageAlt && meta.ogImageAlt;
   }
 
-  let appOgImage = `${process.env.NEXT_PUBLIC_URL}/satnaing-blog-og.png`;
+  let appOgImage = "https://user-images.githubusercontent.com/51189292/230770015-f163b27d-df17-461f-8623-80e3bd71f5d4.png";
   let appOgImageAlt = "Sat Naing's Blog";
 
   if (ogImage) {

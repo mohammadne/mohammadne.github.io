@@ -24,7 +24,7 @@ export const meta = {
     "Sat Naing is a full-stack developer based in Yangon, Myanmar. He is passionate about writing codes and developing web applications to solve real-life challenges.",
   author: "Sat Naing",
   type: "website",
-  ogImage: `${process.env.NEXT_PUBLIC_URL}/satnaing-dev-og-new.png`,
+  ogImage: "https://user-images.githubusercontent.com/51189292/230770030-7127f66a-44cd-4c3b-a59d-d0d87bc8b770.png",
   siteName: "Sat Naing",
   imageAlt: "Sat Naing portfolio website",
 };
