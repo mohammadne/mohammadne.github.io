@@ -16,7 +16,10 @@ module.exports = {
   reactStrictMode: true,
   trailingSlash: false,
   images: {
-    domains: ["res.cloudinary.com"],
+    domains: [
+      "user-images.githubusercontent.com",
+      "res.cloudinary.com"
+    ],
   },
   compiler: {
     removeConsole: true,

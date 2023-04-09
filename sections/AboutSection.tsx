@@ -9,7 +9,6 @@ import { useSection } from "context/section";
 import useOnScreen from "hooks/useOnScreen";
 import useScrollActive from "hooks/useScrollActive";
 
-import satNaing from "../public/satnaing.webp";
 import AboutBgSvg from "@/components/AboutBgSvg";
 import EduGroup from "@/components/EduGroup";
 
@@ -18,6 +17,8 @@ const AboutSection: React.FC = () => {
   const isSecOnScreen = useOnScreen(sectionRef);
 
   const q = gsap.utils.selector(sectionRef);
+
+  const profileImage = "https://user-images.githubusercontent.com/51189292/230769249-0ca017f6-a21e-4b09-b74a-e1d4ce5d3278.png"
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -109,9 +110,8 @@ const AboutSection: React.FC = () => {
           <div className="text-center">
             <RoughNotation
               type="underline"
-              color={`${
-                theme === "light" ? "rgb(0, 122, 122)" : "rgb(5 206 145)"
-              }`}
+              color={`${theme === "light" ? "rgb(0, 122, 122)" : "rgb(5 206 145)"
+                }`}
               strokeWidth={2}
               order={1}
               show={isSecOnScreen}
@@ -135,7 +135,7 @@ const AboutSection: React.FC = () => {
 
                 <div className="profile-picture overflow-hidden md:overflow-visible rounded-md md:shadow-2xl">
                   <Image
-                    src={satNaing}
+                    src={profileImage}
                     width={1700}
                     height={1790}
                     priority
