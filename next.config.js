@@ -16,6 +16,7 @@ module.exports = {
   reactStrictMode: true,
   trailingSlash: false,
   images: {
+    unoptimized: true,
     domains: [
       "user-images.githubusercontent.com",
       "res.cloudinary.com"
