@@ -22,9 +22,11 @@ jobs:
 
       - name: Build
         run: |
-          npm i
+          npm install
           npm run build
           npm run export
+          touch ./out/.nojekyll
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
