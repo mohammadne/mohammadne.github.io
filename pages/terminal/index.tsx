@@ -6,9 +6,57 @@ import LinkButton from "@/components/LinkButton";
 import Loader from "@/components/Loader";
 
 import { meta } from "pages";
-import Link from "next/link";
+import { createContext, useEffect, useState } from "react";
+import { DefaultTheme, ThemeProvider } from "styled-components";
+import { useTheme } from "../../hooks/terminal/useTheme";
+import GlobalStyle from "../../components/terminal/styles/GlobalStyle";
+import Terminal from "../../components/terminal/Terminal";
 
-const Terminal: NextPage = () => {
+export const themeContext = createContext<
+    ((switchTheme: DefaultTheme) => void) | null
+>(null);
+
+const Page: NextPage = () => {
+    // themes
+    const { theme, themeLoaded, setMode } = useTheme();
+    const [selectedTheme, setSelectedTheme] = useState(theme);
+
+    // Disable browser's default behavior
+    // to prevent the page go up when Up Arrow is pressed
+    useEffect(() => {
+        window.addEventListener(
+            "keydown",
+            e => {
+                ["ArrowUp", "ArrowDown"].indexOf(e.code) > -1 && e.preventDefault();
+            },
+            false
+        );
+    }, []);
+
+    useEffect(() => {
+        setSelectedTheme(theme);
+    }, [themeLoaded]);
+
+    // Update meta tag colors when switching themes
+    useEffect(() => {
+        const themeColor = theme.colors?.body;
+
+        const metaThemeColor = document.querySelector("meta[name='theme-color']");
+        const maskIcon = document.querySelector("link[rel='mask-icon']");
+        const metaMsTileColor = document.querySelector(
+            "meta[name='msapplication-TileColor']"
+        );
+
+        metaThemeColor && metaThemeColor.setAttribute("content", themeColor);
+        metaMsTileColor && metaMsTileColor.setAttribute("content", themeColor);
+        maskIcon && maskIcon.setAttribute("color", themeColor);
+    }, [selectedTheme]);
+
+    const themeSwitcher = (switchTheme: DefaultTheme) => {
+        setSelectedTheme(switchTheme);
+        setMode(switchTheme);
+    };
+
     return (
         <>
             <AppHead
@@ -17,29 +65,19 @@ const Terminal: NextPage = () => {
                 meta={meta}
             />
             <Loader>Terminal</Loader>
-            <div className="bg-bglight dark:bg-bgdark overflow-hidden">
-                <div className="h-screen flex flex-col justify-center selection:bg-marrsgreen selection:text-bglight dark:selection:bg-carrigreen dark:selection:text-bgdark">
-                    <div className="flex justify-center items-center flex-col mt-auto">
-                        <div className="text-lg xs:text-2xl my-2">
-                            Terminal will be added soon :&apos;&#40;
-                        </div>
-                        <div className="flex space-x-4">
-                            <LinkButton href="/" outline>
-                                Go back Home
-                            </LinkButton>
-                            <Link
-                                href="/blog"
-                                className="link flex items-center px-4 lg:text-xl hover:underline"
-                            >
-                                Go to Blog
-                            </Link>
-                        </div>
-                    </div>
-                    <Footer noPadding />
-                </div>
-            </div>
+            <h1 className="sr-only" aria-label="Terminal Portfolio">
+                Terminal Portfolio
+            </h1>
+            {themeLoaded && (
+                <ThemeProvider theme={selectedTheme}>
+                    <GlobalStyle />
+                    <themeContext.Provider value={themeSwitcher}>
+                        <Terminal />
+                    </themeContext.Provider>
+                </ThemeProvider>
+            )}
         </>
     );
 };
 
-export default Terminal;
+export default Page;
