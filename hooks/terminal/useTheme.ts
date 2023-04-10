@@ -5,6 +5,23 @@ import { DefaultTheme } from "styled-components";
 import themes from "@/components/terminal/styles/themes";
 import { setToLS, getFromLS } from "../../utils/terminal/storage";
 
+declare module 'styled-components' {
+  export interface DefaultTheme {
+    id: string;
+    name: string;
+
+    colors: {
+      body: string;
+      main?: string;
+      secondary: string;
+      text: Record<number, string>;
+      primary: string;
+      scrollHandle: string;
+      scrollHandleHover: string;
+    };
+  }
+}
+
 export const useTheme = () => {
   const [theme, setTheme] = useState<DefaultTheme>(themes.dark);
   const [themeLoaded, setThemeLoaded] = useState(false);
