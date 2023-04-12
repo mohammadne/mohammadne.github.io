@@ -2,14 +2,14 @@
 /*
 
 # Except these files & folders
-!/components
-!/contents
-!/context
-!/hooks
-!/pages
-!/sections
-!/styles
-!/utils
+!/data
+!/src/components
+!/src/context
+!/src/hooks
+!/src/pages
+!/src/sections
+!/src/styles
+!/src/utils
 !/.github
 !tsconfig.json
 !tailwind.config.js 

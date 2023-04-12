@@ -19,20 +19,12 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": ".",
-    "paths": {
-      "@/components/*": [
-        "components/*"
-      ],
-      "@/sections/*": [
-        "sections/*"
-      ]
-    }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/api/staticdata.js"
+    "src/pages/api/staticdata.js"
   ],
   "exclude": [
     "node_modules"
