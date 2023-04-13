@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import LinkButton from "../components/LinkButton";
 
-const HeroSection: React.FC = () => {
+const LandingSection: React.FC = () => {
   const sectionRef = useRef(null);
   const q = gsap.utils.selector(sectionRef);
 
@@ -64,7 +64,7 @@ const HeroSection: React.FC = () => {
           </p>
         </div>
         <LinkButton href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
-          Contact me!
+          Download my resume
         </LinkButton>
       </div>
       <a
@@ -96,4 +96,4 @@ const HeroSection: React.FC = () => {
   );
 };
 
-export default HeroSection;
+export default LandingSection;
