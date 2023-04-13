@@ -1,17 +1,19 @@
 import type { NextPage } from "next";
+import Link from "next/link";
 
 import AppHead from "src/components/AppHead";
 import Footer from "src/components/Footer";
 import LinkButton from "src/components/LinkButton";
 
 import { meta } from "src/pages";
-import Link from "next/link";
+
+import data from 'data.json'
 
 const Home: NextPage = () => {
   return (
     <>
       <AppHead
-        title="Sat Naing - A Full-stack Developer"
+        title={data.account.username}
         url={`${process.env.NEXT_PUBLIC_URL}`}
         meta={meta}
       />
@@ -32,12 +34,6 @@ const Home: NextPage = () => {
               <LinkButton href="/" outline>
                 Go back Home
               </LinkButton>
-              <Link
-                href="/blog"
-                className="link flex items-center px-4 lg:text-xl hover:underline"
-              >
-                Go to Blog
-              </Link>
             </div>
           </div>
           <Footer noPadding />

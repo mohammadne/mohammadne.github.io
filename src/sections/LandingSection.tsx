@@ -40,7 +40,7 @@ const LandingSection: React.FC = () => {
 
       <div className="z-10 relative">
         <span className="text-marrsgreen lg:text-lg font-medium dark:text-carrigreen">
-          Hi my name is
+          Hi, my name is
         </span>
         <div className="overflow-hidden">
           <h1 className="text-animation text-4xl md:text-5xl lg:text-7xl md:my-2 font-semibold my-1">
@@ -54,22 +54,19 @@ const LandingSection: React.FC = () => {
         </div>
         <div className="mt-2 my-4 md:mb-8">
           <p className="mb-1">
-            {data.about.intro1.part1}
+            {data.about.introduction.part1}
           </p>
           <p>
-            {data.about.intro1.part2}
-          </p>
-          <p>
-            {data.about.intro1.part3}
+            {data.about.introduction.part2}
           </p>
         </div>
 
         <div className="flex space-x-4">
-          <LinkButton href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
-            Download my Resume
+          <LinkButton href={data.image.resume} targetBlank>
+            Download my Résumé
           </LinkButton>
 
-          <LinkButton href="/" outline>
+          <LinkButton href={data.socials.github} outline targetBlank>
             Checkout my Github
           </LinkButton>
 

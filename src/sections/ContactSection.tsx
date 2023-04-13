@@ -7,6 +7,8 @@ import { useSection } from "src/context/section";
 import useOnScreen from "src/hooks/useOnScreen";
 import useScrollActive from "src/hooks/useScrollActive";
 
+import data from 'data.json'
+
 const ContactSection: React.FC = () => {
   const { theme } = useTheme();
 
@@ -33,11 +35,11 @@ const ContactSection: React.FC = () => {
         <RoughNotation
           type="underline"
           color={`${theme === "light" ? "rgb(0, 122, 122)" : "rgb(5 206 145)"}`}
-          strokeWidth={2}
+          strokeWidth={3}
           order={1}
           show={isOnScreen}
         >
-          <h2 className="text-2xl inline-block my-6 font-medium">Contact</h2>
+          <h2 className="text-2xl inline-block my-6 font-medium">Contact Me</h2>
         </RoughNotation>
       </div>
       <div className="mt-8 mb-20">
@@ -49,7 +51,7 @@ const ContactSection: React.FC = () => {
           challenges. If you have opportunities for collaboration or want to
           build something amazing, don't hesitate to contact me!
         </p>
-        <LinkButton href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
+        <LinkButton href={`mailto:` + data.account.mail}>
           Get in touch!
         </LinkButton>
       </div>

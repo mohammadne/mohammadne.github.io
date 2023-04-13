@@ -98,7 +98,7 @@ const AboutSection: React.FC = () => {
   const aboutSection = useScrollActive(sectionRef);
   const { onSectionChange } = useSection();
   useEffect(() => {
-    aboutSection ? onSectionChange!("who am i?") : onSectionChange!("");
+    aboutSection ? onSectionChange!("about") : onSectionChange!("");
   }, [aboutSection]);
 
   return (
@@ -170,14 +170,14 @@ const AboutSection: React.FC = () => {
             </div>
 
             <p className="col-start-1 col-end-3 row-start-4 row-end-6 lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-6 lg:ml-8 lg:mt-auto about-intro">
-              {data.about.intro2}
+              {data.about.interests}
             </p>
 
             <div
               className="col-start-3 col-end-6 row-start-1 row-end-6 lg:row-start-2 lg:row-end-7 md:ml-8 place-content-end"
               ref={eduRef}
             >
-              <p className="edu-bg my-4">Here is my educational background.</p>
+              <p className="edu-bg my-4">Here is my educational background which plays an important role in my growth.</p>
               {data.educationInfo.map((education, index) => (
                 <EducationGroup education={education} key={index} />
               ))}
