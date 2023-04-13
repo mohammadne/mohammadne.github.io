@@ -5,7 +5,7 @@ type Props = {
 const Footer: React.FC<Props> = ({ noPadding = false }) => {
   return (
     <footer
-      className={`${noPadding ? "pb-4" : "pb-24"} md:pb-4 text-center mt-auto`}
+      className={`${noPadding ? "pb-4" : "pb-24"} md:pb-4 text-center mt-auto `}
     >
       <div>
         Coded with <span className="sr-only">love</span>

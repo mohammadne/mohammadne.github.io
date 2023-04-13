@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from "next";
+import type { NextPage } from "next";
 
 import AppHead from "src/components/AppHead";
 import Loader from "src/components/Loader";
@@ -7,17 +7,8 @@ import Header from "src/components/Header";
 import SocialLinks from "src/components/SocialLinks";
 import LandingSection from "src/sections/LandingSection";
 import AboutSection from "src/sections/AboutSection";
-import ProjectSection from "src/sections/ProjectSection";
-import BlogSection from "src/sections/BlogSection";
 import ContactSection from "src/sections/ContactSection";
 import Footer from "src/components/Footer";
-
-import { getAllPosts } from "src/utils/api";
-import { MdxMeta } from "./blog/posts/[slug]";
-
-type Props = {
-  blogPosts: MdxMeta[];
-};
 
 export const meta = {
   description:
@@ -29,7 +20,7 @@ export const meta = {
   imageAlt: "Sat Naing portfolio website",
 };
 
-const Home: NextPage<Props> = ({ blogPosts }) => {
+const Home: NextPage = () => {
   return (
     <>
       <AppHead
@@ -45,8 +36,6 @@ const Home: NextPage<Props> = ({ blogPosts }) => {
           <main id="main">
             <LandingSection />
             <AboutSection />
-            <ProjectSection />
-            <BlogSection posts={blogPosts} />
             <ContactSection />
           </main>
           <SocialLinks page="index" />
@@ -55,24 +44,6 @@ const Home: NextPage<Props> = ({ blogPosts }) => {
       </div>
     </>
   );
-};
-
-export const getStaticProps: GetStaticProps = async () => {
-  const blogPosts = getAllPosts([
-    "coverImage",
-    "coverImageAlt",
-    "slug",
-    "title",
-    "excerpt",
-    "datetime",
-    "featured",
-  ]);
-
-  return {
-    props: {
-      blogPosts,
-    },
-  };
 };
 
 export default Home;

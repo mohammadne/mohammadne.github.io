@@ -10,7 +10,7 @@ import useOnScreen from "src/hooks/useOnScreen";
 import useScrollActive from "src/hooks/useScrollActive";
 
 import AboutBgSvg from "src/components/AboutBgSvg";
-import EduGroup from "src/components/EduGroup";
+import EducationGroup from "src/components/EducationGroup";
 
 const AboutSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -181,8 +181,8 @@ const AboutSection: React.FC = () => {
               ref={eduRef}
             >
               <p className="edu-bg my-4">Here is my educational background.</p>
-              {educationInfo.map((edu) => (
-                <EduGroup edu={edu} key={edu.id} />
+              {educationInfo.map((education, index) => (
+                <EducationGroup education={education} key={index} />
               ))}
             </div>
           </div>
@@ -198,7 +198,7 @@ const educationInfo = [
   {
     id: 1,
     title: "B.Sc (Hons) in Computing",
-    subTitle: "Edinburgh Napier University | 2018 ~ 2019",
+    subtitle: "Edinburgh Napier University | 2018 ~ 2019",
     list: [
       "Studied computer science, software development, DevOps",
       "Graduated with First Class Honours",
@@ -208,7 +208,7 @@ const educationInfo = [
   {
     id: 2,
     title: "HND in Computing & System Development",
-    subTitle: "Info Myanmar University | 2016 - 2018",
+    subtitle: "Info Myanmar University | 2016 - 2018",
     list: [
       "Studied modules specializing in software development",
       "Passed HND with overall Merit",
@@ -217,7 +217,7 @@ const educationInfo = [
   {
     id: 3,
     title: "IELTS",
-    subTitle: "British Council Myanmar | 2017",
+    subtitle: "British Council Myanmar | 2017",
     list: ["Got overall band score 6.5."],
   },
 ];

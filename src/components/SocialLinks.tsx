@@ -130,14 +130,6 @@ const navLinks = [
     text: "Who am i?",
   },
   {
-    url: "#projects",
-    text: "Projects",
-  },
-  {
-    url: "#blog",
-    text: "Blog",
-  },
-  {
     url: "#contact",
     text: "Contact",
   },
