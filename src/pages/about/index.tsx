@@ -1,5 +1,4 @@
 import type { GetStaticProps, NextPage } from "next";
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 
 import AppHead from "src/components/AppHead";
@@ -73,14 +72,11 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     "featured",
   ]);
 
-  const translations = await serverSideTranslations(locale ?? 'en', [
-    'common',
-  ])
+
 
   return {
     props: {
       blogPosts,
-      ...translations,
     },
   };
 };
