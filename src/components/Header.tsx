@@ -6,6 +6,8 @@ import gsap from "gsap";
 import useScrollListener from "src/hooks/useScrollListener";
 import { useSection } from "src/context/section";
 
+import data from 'data.json'
+
 const navLinks = [
   {
     url: "#about",
@@ -75,8 +77,8 @@ const Header: React.FC = () => {
             href="/"
             className="text-xl sm:text-2xl md:hover:text-marrsgreen dark:md:hover:text-carrigreen focus-visible:outline-marrsgreen dark:focus-visible:outline-carrigreen"
           >
-            SatNaing
-            <span className="text-marrsgreen dark:text-carrigreen">.dev</span>
+            {data.account.username}
+            <span className="text-marrsgreen dark:text-carrigreen">.{data.domain.extension}</span>
           </Link>
           <nav className="flex items-center">
             <div className="glassmorphism md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none fixed md:static bottom-4 z-30 left-1/2 md:left-auto transform -translate-x-1/2 md:transform-none bg-bglight dark:bg-carddark dark:text-textlight w-11/12 rounded drop-shadow-lg md:drop-shadow-none">

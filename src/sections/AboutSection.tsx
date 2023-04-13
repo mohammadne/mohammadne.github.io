@@ -9,16 +9,17 @@ import { useSection } from "src/context/section";
 import useOnScreen from "src/hooks/useOnScreen";
 import useScrollActive from "src/hooks/useScrollActive";
 
+import LinkButton from "src/components/LinkButton";
 import AboutBgSvg from "src/components/AboutBgSvg";
 import EducationGroup from "src/components/EducationGroup";
+
+import data from 'data.json'
 
 const AboutSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const isSecOnScreen = useOnScreen(sectionRef);
 
   const q = gsap.utils.selector(sectionRef);
-
-  const profileImage = "https://user-images.githubusercontent.com/51189292/230769249-0ca017f6-a21e-4b09-b74a-e1d4ce5d3278.png"
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -135,11 +136,11 @@ const AboutSection: React.FC = () => {
 
                 <div className="profile-picture overflow-hidden md:overflow-visible rounded-md md:shadow-2xl">
                   <Image
-                    src={profileImage}
+                    src={data.image.portfolio}
                     width={1700}
                     height={1790}
                     priority
-                    alt="Sat Naing profile picture"
+                    alt={data.account.fullname + " 's profile picture"}
                     className="rounded-md"
                   />
                 </div>
@@ -169,11 +170,7 @@ const AboutSection: React.FC = () => {
             </div>
 
             <p className="col-start-1 col-end-3 row-start-4 row-end-6 lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-6 lg:ml-8 lg:mt-auto about-intro">
-              With 3 years of comprehensive experience in web application
-              development, I have honed my skills in both frontend and backend
-              development. In addition to my hands-on experience in web
-              development, my education has also played a critical role in
-              providing a strong foundation for my career.
+              {data.about.intro2}
             </p>
 
             <div
@@ -181,10 +178,11 @@ const AboutSection: React.FC = () => {
               ref={eduRef}
             >
               <p className="edu-bg my-4">Here is my educational background.</p>
-              {educationInfo.map((education, index) => (
+              {data.educationInfo.map((education, index) => (
                 <EducationGroup education={education} key={index} />
               ))}
             </div>
+
           </div>
         </RoughNotationGroup>
       </section>
@@ -193,33 +191,5 @@ const AboutSection: React.FC = () => {
     </div>
   );
 };
-
-const educationInfo = [
-  {
-    id: 1,
-    title: "B.Sc (Hons) in Computing",
-    subtitle: "Edinburgh Napier University | 2018 ~ 2019",
-    list: [
-      "Studied computer science, software development, DevOps",
-      "Graduated with First Class Honours",
-      "Got merit in 7 modules out of 9",
-    ],
-  },
-  {
-    id: 2,
-    title: "HND in Computing & System Development",
-    subtitle: "Info Myanmar University | 2016 - 2018",
-    list: [
-      "Studied modules specializing in software development",
-      "Passed HND with overall Merit",
-    ],
-  },
-  {
-    id: 3,
-    title: "IELTS",
-    subtitle: "British Council Myanmar | 2017",
-    list: ["Got overall band score 6.5."],
-  },
-];
 
 export default AboutSection;

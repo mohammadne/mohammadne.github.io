@@ -4,7 +4,6 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 type Props = {
   education: {
-    id: number;
     title: string;
     subtitle: string;
     list: string[];

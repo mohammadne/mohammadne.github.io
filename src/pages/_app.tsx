@@ -10,7 +10,7 @@ import "../styles/globals.css";
 import gsap from "gsap";
 import Script from "next/script";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   const cursorRef = useRef(null);
 
   useEffect(() => {
@@ -37,6 +37,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     document.addEventListener("mousedown", hideCursor);
     document.addEventListener("mouseup", showCursor);
   }, []);
+
   return (
     <>
       <Script
@@ -73,4 +74,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default App;

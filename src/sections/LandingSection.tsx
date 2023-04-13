@@ -2,7 +2,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-import LinkButton from "../components/LinkButton";
+import LinkButton from "src/components/LinkButton";
+import data from 'data.json'
 
 const LandingSection: React.FC = () => {
   const sectionRef = useRef(null);
@@ -34,7 +35,7 @@ const LandingSection: React.FC = () => {
         aria-hidden="true"
         className="bg-text absolute -top-36 rotate-12 text-gray-100 dark:text-[#1f2e3a] text-9xl scale-150 tracking-wide font-bold select-none pointer-events-none text-center z-0"
       >
-        PASSIONATE PROGRAMMER FREELANCER FULL-STACK DEVELOPER
+        {data.about.passionate.toUpperCase()}
       </span>
 
       <div className="z-10 relative">
@@ -43,24 +44,20 @@ const LandingSection: React.FC = () => {
         </span>
         <div className="overflow-hidden">
           <h1 className="text-animation text-4xl md:text-5xl lg:text-7xl md:my-2 font-semibold my-1">
-            Sat Naing
+            {data.account.fullname}
           </h1>
         </div>
         <div className="overflow-hidden">
           <span className="text-animation text-2xl md:text-3xl lg:text-5xl block md:my-3 text-marrsgreen dark:text-carrigreen font-medium">
-            A Full-stack Developer
+            {data.about.title}
           </span>
         </div>
         <div className="mt-2 my-4 md:mb-8">
           <p className="mb-1">
-            I am a Full-Stack Developer with a passion for delivering
-            exceptional results.
+            {data.about.intro1.part1}
           </p>
           <p>
-            With my expertise in React and NextJS on the frontend, and PHP,
-            CodeIgniter, NodeJS, and Express on the backend, I bring a unique
-            combination of technical skills and creative problem-solving to
-            every project I work on.
+            {data.about.intro1.part2}
           </p>
         </div>
         <LinkButton href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
