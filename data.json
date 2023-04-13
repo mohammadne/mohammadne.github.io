@@ -1,6 +1,7 @@
 {
     "image": {
-        "portfolio": "https://user-images.githubusercontent.com/51189292/230769249-0ca017f6-a21e-4b09-b74a-e1d4ce5d3278.png"
+        "portfolio": "https://user-images.githubusercontent.com/51189292/230769249-0ca017f6-a21e-4b09-b74a-e1d4ce5d3278.png",
+        "og": "https://user-images.githubusercontent.com/51189292/230770030-7127f66a-44cd-4c3b-a59d-d0d87bc8b770.png"
     },
     "domain": {
         "extension": "me"
@@ -10,12 +11,20 @@
         "username": "MohammadNE",
         "mail": "mohammadne.dev@gmail.com"
     },
+    "socials": {
+        "github": "https://github.com/mohammadne",
+        "linkedin": "https://www.linkedin.com/in/mohammadne",
+        "devto": "https://dev.to/mohammadne",
+        "telegram": "https://tel.me/sir_mohammadne"
+    },
     "about": {
-        "title": "Software & Cloud Engineer",
-        "passionate": "passionate programmer freelancer full-stack developer",
+        "title": "Senior Software & Cloud Engineer",
+        "passionate": "passionate software and cloud engineer",
+        "brief": "Mohammad Nasr is an expert software & cloud engineer",
         "intro1": {
-            "part1": "I am a Full-Stack Developer with a passion for delivering exceptional results.",
-            "part2": "With my expertise in React and NextJS on the frontend, and PHP, CodeIgniter, NodeJS, and Express on the backend, I bring a unique combination of technical skills and creative problem-solving to every project I work on."
+            "part1": "I am a forward looking Software Engineer with a passion for delivering exceptional results.",
+            "part2": "With my expertise in Cloud and Backend specially using Go, python, Bash, Lua and Rust, I bring a unique combination of technical skills and creative problem-solving to every project I work on.",
+            "part3": "I am interested in open-source communities, Cloud Technologies, Networking, Linux, Cryptography, Algorithms, Machine Learning, System Design and loves reading technical books."
         },
         "intro2": "With 3 years of comprehensive experience in web application development, I have honed my skills in both frontend and backend development. In addition to my hands-on experience in web development, my education has also played a critical role in providing a strong foundation for my career."
     },

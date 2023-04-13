@@ -59,10 +59,21 @@ const LandingSection: React.FC = () => {
           <p>
             {data.about.intro1.part2}
           </p>
+          <p>
+            {data.about.intro1.part3}
+          </p>
         </div>
-        <LinkButton href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
-          Download my resume
-        </LinkButton>
+
+        <div className="flex space-x-4">
+          <LinkButton href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
+            Download my Resume
+          </LinkButton>
+
+          <LinkButton href="/" outline>
+            Checkout my Github
+          </LinkButton>
+
+        </div>
       </div>
       <a
         href="#about"

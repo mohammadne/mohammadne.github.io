@@ -13,20 +13,19 @@ import Footer from "src/components/Footer";
 import data from 'data.json'
 
 export const meta = {
-  description:
-    "Sat Naing is a full-stack developer based in Yangon, Myanmar. He is passionate about writing codes and developing web applications to solve real-life challenges.",
-  author: "Sat Naing",
+  description: data.about.brief,
+  author: data.account.fullname,
   type: "website",
-  ogImage: "https://user-images.githubusercontent.com/51189292/230770030-7127f66a-44cd-4c3b-a59d-d0d87bc8b770.png",
-  siteName: "Sat Naing",
-  imageAlt: "Sat Naing portfolio website",
+  ogImage: data.image.og,
+  siteName: data.account.fullname,
+  imageAlt: data.account.fullname + "'s portfolio website",
 };
 
 const Home: NextPage = () => {
   return (
     <>
       <AppHead
-        title="Sat Naing - A Full-stack Developer"
+        title={data.account.username}
         url={`${process.env.NEXT_PUBLIC_URL}`}
         meta={meta}
       />
