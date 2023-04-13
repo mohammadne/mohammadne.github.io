@@ -105,7 +105,7 @@ const AboutSection: React.FC = () => {
       ref={sectionRef}
       className="about-panel bg-white dark:bg-[#1B2731] relative"
     >
-      <section id="whoami" className="section">
+      <section id="about" className="section">
         <RoughNotationGroup>
           <div className="text-center">
             <RoughNotation

@@ -13,8 +13,8 @@ const SocialLinks: React.FC<{ page?: string }> = ({ page }) => {
                 href={nav.url}
                 key={nav.url}
                 className={`transition-all outline-marrsdark dark:outline-textlight hover:bg-marrsgreen dark:hover:bg-carrigreen ${currentSection === nav.text.toLowerCase()
-                    ? "bg-marrsgreen dark:bg-carrigreen rotate-0"
-                    : "opacity-50 focus-visible:opacity-100 hover:opacity-80 rotate-45 hover:rotate-12"
+                  ? "bg-marrsgreen dark:bg-carrigreen rotate-0"
+                  : "opacity-50 focus-visible:opacity-100 hover:opacity-80 rotate-45 hover:rotate-12"
                   } w-3 h-3 border-2 border-marrsgreen dark:border-carrigreen`}
               ></a>
             );
@@ -126,7 +126,7 @@ const navLinks = [
     text: "Welcome",
   },
   {
-    url: "#whoami",
+    url: "#about",
     text: "Who am i?",
   },
   {
