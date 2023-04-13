@@ -3,5 +3,3 @@ Disallow: /nogooglebot/
 
 User-agent: *
 Allow: /
-
-Sitemap: https://satnaing.dev/sitemap.xml
