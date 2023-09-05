@@ -16,3 +16,8 @@ export const HighlightSpan = styled.span`
 export const HighlightAlt = styled.span`
   font-weight: 700;
 `;
+
+export const SpaceBetween = styled.p`
+  margin-top: 10px;
+  margin-bottom: 10px;
+`;
