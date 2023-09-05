@@ -1,29 +1,64 @@
-# Mohammad Nasr's Portfolio
+# Portfolio
 
-My portfolio & blog website developed with Next.JS(SSG) and TypeScript. Tailwind CSS and GSAP is used for styling and animations. Blog contents are written in Markdown format. Light & Dark themes supported.
+![ts](https://badgen.net/badge/Built%20With/TypeScript/blue?style=flat-square)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/81fdb91d-c06f-46c2-b18d-dfc6f090f281/deploy-status)](https://app.netlify.com/sites/terminal-sn/deploys)
+![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)
+
+My perfolio website developed with React, TypeScript and Styled-Components. Multiple themes supported and keyboard shortcuts can be used for some functionalities.
 
 ## Features
 
 - Responsive Design 📱💻
-- Light & Dark themes ☀️🌙
-- Fully Accessible ♿️
-- Categories, Tags 🏷
-- Search Box 👀
-- SEO Friendly 🔎
-- Markdown Content 📰
+- Multiple themes 🎨
+- Autocomplete feature ✨ (TAB | Ctrl + i)
+- Go previous and next command ⬆️⬇️
+- View command history 📖
+- PWA and Offline Support 🔥
+- Well-tested ✅
 
 ## Tech Stack
 
-**Frontend** - [NextJS](https://nextjs.org/), [React](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/)  
-**Styling** - [Tailwind CSS](https://tailwindcss.com/)  
-**Animations** - [GSAP](https://greensock.com/)  
-**Design & Prototype** - [Figma](https://figma.com/)  
+**Frontend** - [React](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/)  
+**Styling** - [Styled-Components](https://styled-components.com/)  
+**UI/UX** - [Figma](https://figma.com/)  
 **State Management** - [ContextAPI](https://reactjs.org/docs/context.html)  
-**Backend** - [Forestry Headless CMS](https://forestry.io/)  
-**Deployment** - [Vercel](https://vercel.com/)
+**Testing** - [Vitest](https://vitest.dev/), [React Testing Library](https://testing-library.com/)  
+**Deployment** - [Netlify](https://app.netlify.com/)
 
-## inspirations
+## Lighthouse Score
 
-- [Brittany Chiang Website](https://brittanychiang.com/)
-- [Jacob Herper Portfolio](https://jacobherper.com/)
-- [Sat Naing Portfolio & Blog](https://satnaing.dev/)
+<p align="center">
+<img width="710" alt="Portfolio Lighthouse Score" src="public/lighthouse-result.svg">
+</p>
+
+## Running Locally
+
+Clone the project
+
+```bash
+git clone https://github.com/satnaing/terminal-portfolio.git
+```
+
+Go to the project directory
+
+```bash
+cd terminal-portfolio
+```
+
+Remove remote origin
+
+```bash
+git remote remove origin
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the server
+
+```bash
+npm run dev
+```

@@ -1,20 +1,11 @@
 # Ignore everything
 /*
 
-# Except these files & folders
-!/data
-!/src/components
-!/src/context
-!/src/hooks
-!/src/pages
-!/src/sections
-!/src/styles
-!/src/utils
+# Except this folder
+!/src
 !/.github
 !tsconfig.json
-!tailwind.config.js 
-!postcss.config.js 
-!next.config.js 
+!tsconfig.node.json
 !package.json
 !.prettierrc
 !.eslintrc.json
