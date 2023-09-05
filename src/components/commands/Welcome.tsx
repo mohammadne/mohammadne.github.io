@@ -1,16 +1,15 @@
 import {
   Cmd,
-  HeroContainer,
+  Container,
   PreName,
   Seperator,
 } from "../styles/Welcome.styled";
 
 const Welcome: React.FC = () => {
   return (
-    <HeroContainer data-testid="welcome">
-      <div className="info-section">
-        <PreName>
-          {`
+    <Container>
+      <PreName>
+        {`
 ╭━╮╭━╮  ╭╮               ╭┳━╮ ╭┳━━━╮
 ┃┃╰╯┃┃  ┃┃               ┃┃┃╰╮┃┃╭━━╯
 ┃╭╮╭╮┣━━┫╰━┳━━┳╮╭┳╮╭┳━━┳━╯┃╭╮╰╯┃╰━━╮
@@ -18,14 +17,13 @@ const Welcome: React.FC = () => {
 ┃┃┃┃┃┃╰╯┃┃┃┃╭╮┃┃┃┃┃┃┃╭╮┃╰╯┃┃ ┃┃┃╰━━╮
 ╰╯╰╯╰┻━━┻╯╰┻╯╰┻┻┻┻┻┻┻╯╰┻━━┻╯ ╰━┻━━━╯
           `}
-        </PreName>
-        <div>Welcome to my portfolio.</div>
-        <Seperator>----</Seperator>
-        <div>
-          For a list of available commands, type `<Cmd>help</Cmd>`.
-        </div>
+      </PreName>
+      <div>Welcome to my portfolio.</div>
+      <Seperator>----</Seperator>
+      <div>
+        For a list of available commands, type `<Cmd>help</Cmd>`.
       </div>
-    </HeroContainer>
+    </Container>
   );
 };
 

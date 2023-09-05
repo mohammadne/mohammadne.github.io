@@ -36,13 +36,13 @@ My perfolio website developed with React, TypeScript and Styled-Components. Mult
 Clone the project
 
 ```bash
-git clone https://github.com/satnaing/terminal-portfolio.git
+git clone https://github.com/mohammadne/portfolio.git
 ```
 
 Go to the project directory
 
 ```bash
-cd terminal-portfolio
+cd portfolio
 ```
 
 Remove remote origin

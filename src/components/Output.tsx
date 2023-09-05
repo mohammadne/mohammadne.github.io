@@ -43,7 +43,7 @@ const Output: React.FC<Props> = ({ index, cmd }) => {
           help: <Help />,
           history: <History />,
           projects: <Projects />,
-          pwd: <GeneralOutput>/home/satnaing</GeneralOutput>,
+          pwd: <GeneralOutput>/home/mohammadne</GeneralOutput>,
           socials: <Socials />,
           themes: <Themes />,
           welcome: <Welcome />,

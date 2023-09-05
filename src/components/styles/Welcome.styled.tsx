@@ -1,18 +1,7 @@
 import styled from "styled-components";
 
-export const HeroContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap-reverse;
-
-  @media (max-width: 932px) {
-    margin-bottom: 1.5rem;
-  }
-
-  div {
-    @media (min-width: 1024px) {
-      flex-basis: 50%;
-    }
-  }
+export const Container = styled.div`
+  margin-bottom: 1rem;
 `;
 
 export const PreName = styled.pre`
