@@ -1,22 +1,23 @@
 import styled from "styled-components";
 
-export const ProjectContainer = styled.div`
+export const HobbyContainer = styled.div`
   margin-top: 0.5rem;
   margin-bottom: 0.875rem;
 `;
 
-export const ProjectsIntro = styled.div`
+export const HobbiesIntro = styled.div`
   margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   line-height: 1.5rem;
 `;
 
-export const ProjectTitle = styled.div`
-  font-weight: 700;
-  margin-bottom: 0.25rem;
+export const HobbyTitle = styled.div`
+  font-weight: 800;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 `;
 
-export const ProjectDesc = styled.div`
+export const HobbyDesc = styled.div`
   color: ${({ theme }) => theme.colors?.text[200]};
   text-align: justify;
   line-height: 1.5rem;

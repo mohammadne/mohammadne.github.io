@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { ProjectsIntro } from "../styles/Projects.styled";
+import { HobbiesIntro } from "../styles/Hobbies.styled";
 import { Cmd, CmdDesc, CmdList, HelpWrapper } from "../styles/Help.styled";
 import {
   checkRedirect,
@@ -35,7 +35,7 @@ const Socials: React.FC = () => {
     checkArg()
   ) : (
     <HelpWrapper data-testid="socials">
-      <ProjectsIntro>Here are my social links</ProjectsIntro>
+      <HobbiesIntro>Here are my social links</HobbiesIntro>
       {socials.map(({ id, title, url, tab }) => (
         <CmdList key={title}>
           <Cmd>{`${id}. ${title}`}</Cmd>

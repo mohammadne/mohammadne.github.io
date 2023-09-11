@@ -7,7 +7,7 @@ import GeneralOutput from "./commands/GeneralOutput";
 import Help from "./commands/Help";
 import Welcome from "./commands/Welcome";
 import History from "./commands/History";
-import Projects from "./commands/Projects";
+import Hobbies from "./commands/Hobbies";
 import Resume from "./commands/Resume";
 import Socials from "./commands/Socials";
 import Themes from "./commands/Themes";
@@ -39,10 +39,10 @@ const Output: React.FC<Props> = ({ index, cmd }) => {
           echo: <Echo />,
           education: <Education />,
           email: <Email />,
+          hobbies: <Hobbies />,
           resume: <Resume />,
           help: <Help />,
           history: <History />,
-          projects: <Projects />,
           pwd: <GeneralOutput>/home/mohammadne</GeneralOutput>,
           socials: <Socials />,
           themes: <Themes />,
